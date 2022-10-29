@@ -1,0 +1,641 @@
+{
+	"id": "3ec141e46c8e5f9bbdb7ef005417b7ea",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contract/EventOrganizingContract.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.0;\r\n\r\ncontract EventOrganize {\r\n\r\n    struct Event {\r\n        address organizer;\r\n        uint date;\r\n        string name;\r\n        uint price;\r\n        uint tiketCount;\r\n        uint tiketRemain;\r\n    }\r\n\r\n    mapping (uint => Event) events;\r\n\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contract/EventOrganizingContract.sol": {
+				"EventOrganize": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contract/EventOrganizingContract.sol\":62:303  contract EventOrganize {\r... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contract/EventOrganizingContract.sol\":62:303  contract EventOrganize {\r... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220558731278e586c6807a78766b6035ec131c172ea1199889a9d9a04e88963567864736f6c63430008070033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220558731278e586c6807a78766b6035ec131c172ea1199889a9d9a04e88963567864736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 SSTORE DUP8 BALANCE 0x27 DUP15 PC PUSH13 0x6807A78766B6035EC131C172EA GT SWAP10 DUP9 SWAP11 SWAP14 SWAP11 DIV 0xE8 DUP10 PUSH4 0x56786473 PUSH16 0x6C634300080700330000000000000000 ",
+							"sourceMap": "62:241:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "6080604052600080fdfea2646970667358221220558731278e586c6807a78766b6035ec131c172ea1199889a9d9a04e88963567864736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 SSTORE DUP8 BALANCE 0x27 DUP15 PC PUSH13 0x6807A78766B6035EC131C172EA GT SWAP10 DUP9 SWAP11 SWAP14 SWAP11 DIV 0xE8 DUP10 PUSH4 0x56786473 PUSH16 0x6C634300080700330000000000000000 ",
+							"sourceMap": "62:241:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "66",
+								"totalCost": "12666"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 62,
+									"end": 303,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220558731278e586c6807a78766b6035ec131c172ea1199889a9d9a04e88963567864736f6c63430008070033",
+									".code": [
+										{
+											"begin": 62,
+											"end": 303,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 62,
+											"end": 303,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 62,
+											"end": 303,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 62,
+											"end": 303,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 62,
+											"end": 303,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 62,
+											"end": 303,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contract/EventOrganizingContract.sol\":\"EventOrganize\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contract/EventOrganizingContract.sol\":{\"keccak256\":\"0x653ea3bfe27e66b764ec3445c4fc736e481a77c2e270a491a2395319221a267f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8852db79f8b6243093aadcdeda2452a220da2e7ce4284ef66d952de8b858548f\",\"dweb:/ipfs/QmWKTRDS3jYqfuq2Cmo53gv8jXDWSrdpWDNjGdvhf2g95r\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 19,
+								"contract": "contract/EventOrganizingContract.sol:EventOrganize",
+								"label": "events",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_mapping(t_uint256,t_struct(Event)14_storage)"
+							}
+						],
+						"types": {
+							"t_address": {
+								"encoding": "inplace",
+								"label": "address",
+								"numberOfBytes": "20"
+							},
+							"t_mapping(t_uint256,t_struct(Event)14_storage)": {
+								"encoding": "mapping",
+								"key": "t_uint256",
+								"label": "mapping(uint256 => struct EventOrganize.Event)",
+								"numberOfBytes": "32",
+								"value": "t_struct(Event)14_storage"
+							},
+							"t_string_storage": {
+								"encoding": "bytes",
+								"label": "string",
+								"numberOfBytes": "32"
+							},
+							"t_struct(Event)14_storage": {
+								"encoding": "inplace",
+								"label": "struct EventOrganize.Event",
+								"members": [
+									{
+										"astId": 3,
+										"contract": "contract/EventOrganizingContract.sol:EventOrganize",
+										"label": "organizer",
+										"offset": 0,
+										"slot": "0",
+										"type": "t_address"
+									},
+									{
+										"astId": 5,
+										"contract": "contract/EventOrganizingContract.sol:EventOrganize",
+										"label": "date",
+										"offset": 0,
+										"slot": "1",
+										"type": "t_uint256"
+									},
+									{
+										"astId": 7,
+										"contract": "contract/EventOrganizingContract.sol:EventOrganize",
+										"label": "name",
+										"offset": 0,
+										"slot": "2",
+										"type": "t_string_storage"
+									},
+									{
+										"astId": 9,
+										"contract": "contract/EventOrganizingContract.sol:EventOrganize",
+										"label": "price",
+										"offset": 0,
+										"slot": "3",
+										"type": "t_uint256"
+									},
+									{
+										"astId": 11,
+										"contract": "contract/EventOrganizingContract.sol:EventOrganize",
+										"label": "tiketCount",
+										"offset": 0,
+										"slot": "4",
+										"type": "t_uint256"
+									},
+									{
+										"astId": 13,
+										"contract": "contract/EventOrganizingContract.sol:EventOrganize",
+										"label": "tiketRemain",
+										"offset": 0,
+										"slot": "5",
+										"type": "t_uint256"
+									}
+								],
+								"numberOfBytes": "192"
+							},
+							"t_uint256": {
+								"encoding": "inplace",
+								"label": "uint256",
+								"numberOfBytes": "32"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contract/EventOrganizingContract.sol": {
+				"ast": {
+					"absolutePath": "contract/EventOrganizingContract.sol",
+					"exportedSymbols": {
+						"EventOrganize": [
+							20
+						]
+					},
+					"id": 21,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "35:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 20,
+							"linearizedBaseContracts": [
+								20
+							],
+							"name": "EventOrganize",
+							"nameLocation": "71:13:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "EventOrganize.Event",
+									"id": 14,
+									"members": [
+										{
+											"constant": false,
+											"id": 3,
+											"mutability": "mutable",
+											"name": "organizer",
+											"nameLocation": "126:9:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "118:17:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_address",
+												"typeString": "address"
+											},
+											"typeName": {
+												"id": 2,
+												"name": "address",
+												"nodeType": "ElementaryTypeName",
+												"src": "118:7:0",
+												"stateMutability": "nonpayable",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 5,
+											"mutability": "mutable",
+											"name": "date",
+											"nameLocation": "151:4:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "146:9:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 4,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "146:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 7,
+											"mutability": "mutable",
+											"name": "name",
+											"nameLocation": "173:4:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "166:11:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_string_storage_ptr",
+												"typeString": "string"
+											},
+											"typeName": {
+												"id": 6,
+												"name": "string",
+												"nodeType": "ElementaryTypeName",
+												"src": "166:6:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_storage_ptr",
+													"typeString": "string"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 9,
+											"mutability": "mutable",
+											"name": "price",
+											"nameLocation": "193:5:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "188:10:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 8,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "188:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 11,
+											"mutability": "mutable",
+											"name": "tiketCount",
+											"nameLocation": "214:10:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "209:15:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 10,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "209:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 13,
+											"mutability": "mutable",
+											"name": "tiketRemain",
+											"nameLocation": "240:11:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "235:16:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 12,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "235:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "Event",
+									"nameLocation": "101:5:0",
+									"nodeType": "StructDefinition",
+									"scope": 20,
+									"src": "94:165:0",
+									"visibility": "public"
+								},
+								{
+									"constant": false,
+									"id": 19,
+									"mutability": "mutable",
+									"name": "events",
+									"nameLocation": "291:6:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 20,
+									"src": "267:30:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Event_$14_storage_$",
+										"typeString": "mapping(uint256 => struct EventOrganize.Event)"
+									},
+									"typeName": {
+										"id": 18,
+										"keyType": {
+											"id": 15,
+											"name": "uint",
+											"nodeType": "ElementaryTypeName",
+											"src": "276:4:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											}
+										},
+										"nodeType": "Mapping",
+										"src": "267:23:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Event_$14_storage_$",
+											"typeString": "mapping(uint256 => struct EventOrganize.Event)"
+										},
+										"valueType": {
+											"id": 17,
+											"nodeType": "UserDefinedTypeName",
+											"pathNode": {
+												"id": 16,
+												"name": "Event",
+												"nodeType": "IdentifierPath",
+												"referencedDeclaration": 14,
+												"src": "284:5:0"
+											},
+											"referencedDeclaration": 14,
+											"src": "284:5:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_struct$_Event_$14_storage_ptr",
+												"typeString": "struct EventOrganize.Event"
+											}
+										}
+									},
+									"visibility": "internal"
+								}
+							],
+							"scope": 21,
+							"src": "62:241:0",
+							"usedErrors": []
+						}
+					],
+					"src": "35:268:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
